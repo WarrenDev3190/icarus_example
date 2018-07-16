@@ -6,7 +6,7 @@ defmodule Example do
     Hound.start_session()
 
     navigate_to("http://google.com")
-    assert "Google" == page_title()
+    assert "Goggle" == page_title()
 
     Hound.end_session()
   end
