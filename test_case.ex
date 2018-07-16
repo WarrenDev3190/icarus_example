@@ -1,11 +1,12 @@
 defmodule Example do
+  use ExUnit.Case
   use Hound.Helpers
 
   def run do
     Hound.start_session()
 
     navigate_to("http://google.com")
-    IO.inspect(page_title())
+    assert "Google" == page_title()
 
     Hound.end_session()
   end
